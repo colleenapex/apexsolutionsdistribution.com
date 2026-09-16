@@ -1,4 +1,4 @@
-h<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -106,12 +106,12 @@ h<!DOCTYPE html>
 
   /* Desktop nav links (hidden on mobile) */
   .nav-links {
-    display: flex; align-items: center; gap: 2.2rem;
+    display: flex; align-items: center; gap: 1.5rem;
     flex: 1; justify-content: center;
   }
   .nav-links a {
-    font-size: 0.78rem; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase;
+    font-size: 0.73rem; font-weight: 600;
+    letter-spacing: 0.07em; text-transform: uppercase;
     color: rgba(255,255,255,0.6);
     transition: color 0.2s;
     white-space: nowrap;
@@ -565,7 +565,11 @@ h<!DOCTYPE html>
     transition: background 0.22s;
     position: relative;
   }
-  .svc:hover { background: rgba(0,212,212,0.04); }
+  .svc:hover {
+    background: rgba(0,212,212,0.07);
+    border-color: rgba(0,212,212,0.28);
+    box-shadow: inset 0 0 0 1px rgba(0,212,212,0.15);
+  }
   .svc:nth-child(even) { border-right: none; }
   .svc:nth-last-child(-n+2) { border-bottom: none; }
   .svc.active {
@@ -585,8 +589,16 @@ h<!DOCTYPE html>
   }
   .svc-head-l { flex: 1; }
   .svc-n {
-    font-size: 0.58rem; letter-spacing: 0.12em;
-    color: var(--teal); opacity: 0.5; margin-bottom: 0.4rem;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: #fff;
+    font-size: 0.6rem; font-weight: 800;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.65rem;
+    flex-shrink: 0;
   }
   .svc h4 {
     font-size: 0.76rem; font-weight: 700;
@@ -785,9 +797,18 @@ h<!DOCTYPE html>
     font-size: 1.1rem; line-height: 1; color: var(--muted);
     transition: all 0.25s;
   }
+  .faq-item { transition: background 0.25s, border-left-color 0.25s, padding-left 0.25s; }
+  .faq-item.open {
+    background: rgba(0,212,212,0.045);
+    border-left: 3px solid var(--teal);
+    border-bottom-color: rgba(0,212,212,0.22);
+    padding-left: 1.1rem;
+    border-radius: 0 6px 6px 0;
+  }
   .faq-item.open .faq-q { color: var(--teal); }
   .faq-item.open .faq-ico {
     background: var(--teal); border-color: var(--teal); color: #000;
+    box-shadow: 0 0 12px rgba(0,212,212,0.4);
   }
   .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.42s ease; }
   .faq-item.open .faq-a { max-height: 500px; }
@@ -795,6 +816,9 @@ h<!DOCTYPE html>
     padding-bottom: 1.5rem;
     font-size: 0.88rem; line-height: 1.8;
     color: rgba(255,255,255,0.52);
+  }
+  .faq-item.open .faq-a-in {
+    color: rgba(255,255,255,0.78);
   }
 
   /* ══════════════════════════════════════════
@@ -1058,7 +1082,7 @@ h<!DOCTYPE html>
 <!-- ════════════════════════════
      FLOATING PHONE BUTTON
 ════════════════════════════ -->
-<a href="tel:3523995565" class="float-call" aria-label="Call Apex Solutions Distribution">
+<a href="tel:3525711220" class="float-call" aria-label="Call Apex Solutions Distribution">
   <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
 </a>
 
@@ -1080,14 +1104,16 @@ h<!DOCTYPE html>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#features">Why Apex</a>
     <a href="#platforms">Platforms</a>
+    <a href="#how-it-works">How It Works</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </div>
 
   <div class="nav-right">
     <!-- Call Now pill button -->
-    <a href="tel:3523995565" class="nav-call-btn">
+    <a href="tel:3525711220" class="nav-call-btn">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       Call Now
     </a>
@@ -1106,10 +1132,12 @@ h<!DOCTYPE html>
   <a href="#home"><span class="mdot"></span>Home</a>
   <a href="#about"><span class="mdot"></span>About</a>
   <a href="#services"><span class="mdot"></span>Our Services</a>
+  <a href="#features"><span class="mdot"></span>Why Apex</a>
   <a href="#platforms"><span class="mdot"></span>Platforms We Serve</a>
+  <a href="#how-it-works"><span class="mdot"></span>How It Works</a>
   <a href="#faq"><span class="mdot"></span>FAQ</a>
   <a href="#contact"><span class="mdot"></span>Contact</a>
-  <a href="tel:3523995565" class="menu-call">
+  <a href="tel:3525711220" class="menu-call">
     <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
     Call 352-571-1220
   </a>
@@ -1136,7 +1164,7 @@ h<!DOCTYPE html>
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Submit an Inquiry
         </a>
-        <a href="tel:3523995565" class="btn-services">
+        <a href="tel:3525711220" class="btn-services">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:rgba(255,255,255,0.8);flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           352-571-1220
         </a>
@@ -1199,7 +1227,8 @@ h<!DOCTYPE html>
           <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Authorized wholesale distributor and Amazon reseller partner</li>
           <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Focused on replenishable everyday consumer goods — household essentials, health &amp; beauty, personal care, grocery, general merchandise</li>
           <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Brand protection and price integrity management</li>
-          <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Responsive — vendor inquiries reviewed within 1–2 business days</li>
+          <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Active $50,000–$150,000 quarterly inventory budget distributed across multiple brands and product categories</li>
+          <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Responsive — brand and distributor inquiries reviewed within 7–10 business days</li>
         </ul>
         <a href="#contact" class="btn-call" style="display:inline-flex; background: var(--teal); color:#000;">Partner With Us →</a>
 
@@ -1396,7 +1425,7 @@ h<!DOCTYPE html>
           <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Replenishable consumer goods — everyday essentials across household, health &amp; beauty, grocery, and more</li>
           <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Authorized brand distribution — direct from manufacturers and approved brand networks</li>
           <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Additional multi-channel platforms as partnerships and distribution agreements expand</li>
-          <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>B2B wholesale procurement — vendor evaluation within 1–2 business days</li>
+          <li><span class="chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>B2B wholesale procurement — brand evaluation within 7–10 business days</li>
         </ul>
         <div class="platform-pills">
           <div class="pill"><span class="pill-dot"></span>Amazon</div>
@@ -1408,6 +1437,58 @@ h<!DOCTYPE html>
       <div class="platforms-photo reveal reveal-right">
         <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&auto=format&fit=crop" alt="Brand and distributor partnership" loading="lazy"/>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════
+     HOW IT WORKS
+════════════════════════════ -->
+<section id="how-it-works" style="padding:5rem 0;background:linear-gradient(180deg,#0a0a0a 0%,#0d1414 100%);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <span class="tag">The Process</span>
+      <h2 class="h2" style="margin-bottom:0.75rem;">How Brand &amp; Distributor Sourcing Works</h2>
+      <div class="divider" style="margin:0 auto 1.5rem;"></div>
+      <p class="sec-p" style="max-width:600px;margin:0 auto 2rem;">We are an authorized wholesale buyer and multi-channel distributor actively reviewing brands and authorized distributor lines for our current sourcing cycle. If your product line is a fit for our allocation, we will reach out — with the goal of building a consistent supply relationship and becoming a trusted distribution partner for your brand.</p>
+      <!-- Budget callout -->
+      <div style="display:inline-block;background:rgba(0,212,212,0.07);border:1px solid rgba(0,212,212,0.22);border-radius:10px;padding:1.1rem 2.2rem;">
+        <div style="font-size:2.4rem;font-weight:900;color:var(--teal);letter-spacing:-0.03em;line-height:1;">$50,000 – $150,000</div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;color:rgba(255,255,255,0.45);text-transform:uppercase;margin-top:0.4rem;">Active Quarterly Inventory Budget · Distributed Across Brands &amp; Categories</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem;">
+
+      <!-- Step 1 -->
+      <div class="reveal" style="text-align:center;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dk) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 22px rgba(0,212,212,0.30);">
+          <span style="font-size:1.35rem;font-weight:800;color:#000;">01</span>
+        </div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.65rem;">Submit Your Catalog</h3>
+        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.60);margin-bottom:1rem;">Send your wholesale catalog, product line sheet, or brand overview — including UPC/ASIN codes and wholesale unit pricing where available.</p>
+        <a href="#contact" style="display:inline-block;font-size:0.88rem;font-weight:700;color:#000;text-decoration:none;background:var(--teal);border-radius:7px;padding:0.65rem 1.5rem;letter-spacing:0.02em;box-shadow:0 0 18px rgba(0,212,212,0.35);transition:background 0.2s,box-shadow 0.2s;" onmouseover="this.style.background='#00b8b8';this.style.boxShadow='0 0 26px rgba(0,212,212,0.55)'" onmouseout="this.style.background='var(--teal)';this.style.boxShadow='0 0 18px rgba(0,212,212,0.35)'">Submit a Partnership Inquiry →</a>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="reveal d2" style="text-align:center;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--orange) 0%,#c04a00 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 22px rgba(255,107,0,0.28);">
+          <span style="font-size:1.35rem;font-weight:800;color:#fff;">02</span>
+        </div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.65rem;">We Review &amp; Evaluate</h3>
+        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.60);">Our procurement team reviews your submission against our current quarterly allocation cycle — evaluating catalog fit, pricing structure, and marketplace potential. We respond within 7 to 10 business days.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="reveal d3" style="text-align:center;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a8a8a 0%,var(--teal) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 22px rgba(0,212,212,0.22);">
+          <span style="font-size:1.35rem;font-weight:800;color:#000;">03</span>
+        </div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.65rem;">We Reach Out &amp; Move Forward</h3>
+        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.60);">If your line is a fit for our current cycle, we contact you directly to discuss purchase volume, wholesale terms, and next steps. Approved sources move into our active inventory rotation within the same quarter — with the goal of becoming your trusted B2B distribution partner.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1441,8 +1522,8 @@ h<!DOCTYPE html>
           <div class="faq-a"><div class="faq-a-in">When engaged as an authorized distribution partner, we conduct periodic marketplace reviews to identify potential unauthorized sellers, gray market listings, and pricing irregularities. We document findings and coordinate through appropriate reporting channels to help preserve your brand's reputation and pricing structure — with the scope of monitoring aligned to the terms of our partnership.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">How do I submit a vendor or distribution inquiry?<span class="faq-ico">+</span></button>
-          <div class="faq-a"><div class="faq-a-in">Use the contact form below to submit your inquiry, or email our purchasing department directly at purchasing@ApexSolutionsDistribution.com. We encourage you to include your brand catalog or product line sheet — the form accepts file attachments. Our onboarding team will evaluate your submission and respond within one to two business days.</div></div>
+          <button class="faq-q" aria-expanded="false">How do I submit a brand or distribution inquiry?<span class="faq-ico">+</span></button>
+          <div class="faq-a"><div class="faq-a-in">Use the contact form below to submit your inquiry, or email our purchasing department directly at purchasing@ApexSolutionsDistribution.com. We encourage you to include your brand catalog or product line sheet — the form accepts file attachments. Our procurement team will evaluate your submission and respond within 7 to 10 business days.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Do you require exclusivity agreements?<span class="faq-ico">+</span></button>
@@ -1460,17 +1541,29 @@ h<!DOCTYPE html>
 <!-- ════════════════════════════
      CTA
 ════════════════════════════ -->
-<section id="cta" style="padding:0;">
+<section id="cta" style="position:relative;overflow:hidden;padding:0;">
+<!-- Apex mountain silhouette - CTA -->
+  <svg viewBox="0 0 1440 400" preserveAspectRatio="none"
+       xmlns="http://www.w3.org/2000/svg"
+       style="position:absolute;bottom:0;left:0;width:100%;height:400px;z-index:0;pointer-events:none;">
+    <path fill="rgba(255,255,255,0.032)" d="M0,400 L0,392 L55,386 L120,376 L200,362 L290,345 L375,328 L450,314 L510,304 L562,296 L608,300 L655,306 L705,298 L755,290 L808,282 L862,278 L912,282 L962,288 L1015,296 L1072,306 L1135,316 L1210,328 L1295,340 L1380,354 L1440,362 L1440,392 L1440,400 Z"/>
+    <path fill="rgba(255,255,255,0.055)" d="M0,400 L0,398 L58,392 L130,376 L218,356 L320,330 L415,304 L478,280 L528,258 L572,242 L608,248 L648,258 L695,244 L742,228 L792,212 L845,208 L895,214 L945,224 L1000,238 L1062,254 L1132,270 L1212,288 L1305,308 L1395,328 L1440,338 L1440,398 L1440,400 Z"/>
+    <path fill="rgba(255,255,255,0.082)" d="M0,400 L0,400 L60,400 L135,388 L230,366 L340,336 L442,298 L490,260 L530,222 L565,190 L590,168 L608,172 L630,190 L658,210 L692,194 L728,174 L765,152 L795,142 L820,148 L850,162 L882,148 L915,136 L950,128 L980,136 L1012,150 L1058,168 L1112,188 L1178,210 L1255,234 L1345,260 L1440,282 L1440,400 L1440,400 Z"/>
+  </svg>
+  
+  
+  
+  
   <div class="cta-bg"></div>
   <div class="cta-in reveal">
     <span class="tag">Get Started Today</span>
     <h2>Ready to Take Your Brand<br>to the <span class="t">APEX?</span></h2>
-    <p>Our team is actively reviewing new vendor and brand submissions. Let's talk about what a distribution partnership looks like for your brand.</p>
+    <p>Our team is actively reviewing new brand or authorized distributor and brand submissions. Let's talk about what a distribution partnership looks like for your brand.</p>
     <a href="#contact" class="cta-call-btn">
       <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       Submit a Partnership Inquiry
     </a>
-    <div class="cta-note">Prefer to talk? Call us directly: &nbsp;<a href="tel:3523995565" style="color:rgba(255,255,255,0.5);text-decoration:underline;">352-571-1220</a></div>
+    <div class="cta-note">Prefer to talk? Call us directly: &nbsp;<a href="tel:3525711220" style="color:rgba(255,255,255,0.5);text-decoration:underline;">352-571-1220</a></div>
   </div>
 </section>
 
@@ -1480,57 +1573,7 @@ h<!DOCTYPE html>
      To activate: change the section style from "display:none" to "display:block"
      Update brand count and add testimonial cards as you grow your partnerships.
 ════════════════════════════ -->
-<section id="social-proof" style="display:none;">
-  <div class="container">
-    <div class="tc reveal" style="margin-bottom:3rem;">
-      <span class="tag">Our Partners</span>
-      <h2 class="h2">Brands That <span style="color:var(--teal)">Trust Us</span></h2>
-      <div class="divider"></div>
-      <p style="color:var(--muted);max-width:560px;margin:0 auto;font-size:.95rem;line-height:1.75;">
-        We work with a select group of brands and authorized distributors — keeping our partnerships focused, personal, and results-driven.
-      </p>
-    </div>
 
-    <!-- STAT COUNTER — update the number as you grow -->
-    <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:4rem;">
-      <div style="text-align:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem 3rem;">
-        <div style="font-size:3rem;font-weight:900;color:var(--teal);line-height:1;" id="brandCount">0</div>
-        <div style="color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-top:.4rem;">Active Brand Partners</div>
-      </div>
-      <div style="text-align:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem 3rem;">
-        <div style="font-size:3rem;font-weight:900;color:var(--teal);line-height:1;" id="skuCount">0</div>
-        <div style="color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-top:.4rem;">Active SKUs</div>
-      </div>
-    </div>
-
-    <!-- TESTIMONIAL CARDS — duplicate this block for each review you receive -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;max-width:960px;margin:0 auto;">
-
-      <!-- TESTIMONIAL 1 — replace placeholder text with real feedback -->
-      <div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:1.75rem;">
-        <div style="color:var(--teal);font-size:1.2rem;margin-bottom:.75rem;">★★★★★</div>
-        <p style="color:#ccc;font-size:.93rem;line-height:1.75;font-style:italic;margin-bottom:1rem;">
-          "Add your first brand testimonial here. Copy/paste this block to add more."
-        </p>
-        <div style="color:var(--muted);font-size:.82rem;border-top:1px solid var(--border);padding-top:.75rem;">
-          Brand Name / Title
-        </div>
-      </div>
-
-      <!-- TESTIMONIAL 2 — copy this block and add your second review -->
-      <div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:1.75rem;">
-        <div style="color:var(--teal);font-size:1.2rem;margin-bottom:.75rem;">★★★★★</div>
-        <p style="color:#ccc;font-size:.93rem;line-height:1.75;font-style:italic;margin-bottom:1rem;">
-          "Paste second testimonial here when you have it."
-        </p>
-        <div style="color:var(--muted);font-size:.82rem;border-top:1px solid var(--border);padding-top:.75rem;">
-          Brand Name / Title
-        </div>
-      </div>
-
-    </div><!-- end testimonials grid -->
-  </div>
-</section>
 
 <!-- ════════════════════════════
      CONTACT
@@ -1570,7 +1613,7 @@ h<!DOCTYPE html>
       <div class="reveal reveal-left">
         <h2 class="contact-left" style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;text-transform:uppercase;line-height:1.1;margin-bottom:0.5rem;">Ready to Take Your<br>Brand to the <span class="t" style="color:var(--teal)">APEX</span></h2>
         <div class="divider"></div>
-        <p style="color:var(--muted);font-size:.92rem;line-height:1.78;margin-bottom:2rem;">Our onboarding team actively reviews all vendor and brand submissions. Please include your catalog and distribution details. We'll evaluate your inquiry and respond within one to two business days.</p>
+        <p style="color:var(--muted);font-size:.92rem;line-height:1.78;margin-bottom:2rem;">Our procurement team actively reviews all brand or authorized distributor and brand submissions. Please include your catalog and distribution details. We'll evaluate your inquiry and respond within 7 to 10 business days.</p>
         <div class="c-detail">
           <div class="c-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
           <div><div class="c-lbl">Company</div><div class="c-val">Apex Solutions Distribution LLC</div></div>
@@ -1585,14 +1628,14 @@ h<!DOCTYPE html>
         </div>
         <div class="c-detail">
           <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div><div class="c-lbl">Phone</div><div class="c-val"><a href="tel:3523995565">352-571-1220</a></div></div>
+          <div><div class="c-lbl">Phone</div><div class="c-val"><a href="tel:3525711220">352-571-1220</a></div></div>
         </div>
       </div>
 
       <!-- Form -->
       <div class="form-box reveal reveal-right">
         <h3>Submit a Partnership Inquiry</h3>
-        <p class="form-tagline">Fill out the form and attach your catalog or price list. Our onboarding team reviews every submission within 1–2 business days.</p>
+        <p class="form-tagline">Fill out the form and attach your catalog or price list. Our procurement team reviews every submission within 7–10 business days.</p>
         <p style="font-size:0.8rem;color:var(--muted);margin-top:-0.5rem;margin-bottom:1.25rem;line-height:1.65;">
           <strong style="color:#aaa;">Tip for brands submitting for review:</strong> Please include a standard wholesale pricing list in Excel (.xlsx) or CSV format containing UPC/ASIN codes and your wholesale unit cost. This allows us to evaluate your catalog efficiently.
         </p>
@@ -1610,7 +1653,7 @@ h<!DOCTYPE html>
             <label for="it">Inquiry Type *</label>
             <select id="it" name="inquiry_type" required>
               <option value="" disabled selected>Select inquiry type…</option>
-              <option>Vendor / Brand Submission</option>
+              <option>Brand or Distributor Submission</option>
               <option>Wholesale Distribution Inquiry</option>
               <option>Replenishable Goods Partnership</option>
               <option>Amazon Reseller Inquiry</option>
@@ -1642,7 +1685,15 @@ h<!DOCTYPE html>
 <!-- ════════════════════════════
      FOOTER
 ════════════════════════════ -->
-<footer>
+<footer style="position:relative;overflow:hidden;">
+<!-- Apex mountain silhouette - footer -->
+  <svg viewBox="0 0 1440 230" preserveAspectRatio="none"
+       xmlns="http://www.w3.org/2000/svg"
+       style="position:absolute;top:0;left:0;width:100%;height:230px;z-index:0;pointer-events:none;">
+    <path fill="rgba(255,255,255,0.038)" d="M0,230 L0,218 L45,214 L90,208 L135,202 L178,196 L218,188 L258,180 L298,170 L338,162 L375,168 L410,174 L448,178 L488,174 L528,170 L568,176 L608,182 L648,178 L688,172 L728,166 L770,162 L812,166 L855,172 L898,168 L942,164 L980,162 L1018,166 L1058,170 L1098,174 L1140,178 L1190,182 L1245,188 L1305,194 L1360,200 L1405,206 L1440,210 L1440,218 L1440,230 Z"/>
+    <path fill="rgba(255,255,255,0.06)" d="M0,230 L0,214 L50,210 L105,200 L165,188 L235,172 L305,154 L370,140 L420,130 L460,122 L485,128 L510,136 L545,144 L585,150 L625,142 L665,132 L705,122 L745,114 L785,118 L825,124 L865,120 L905,114 L945,110 L980,114 L1015,120 L1055,128 L1098,136 L1145,144 L1200,152 L1265,162 L1335,172 L1440,182 L1440,214 L1440,230 Z"/>
+    <path fill="rgba(255,255,255,0.088)" d="M0,230 L0,208 L55,204 L120,192 L195,176 L272,158 L348,136 L405,116 L442,100 L462,86 L474,80 L480,88 L492,102 L510,118 L535,128 L562,138 L598,130 L635,120 L672,108 L710,96 L748,84 L782,80 L810,86 L840,96 L870,108 L905,100 L940,94 L965,90 L990,96 L1020,106 L1058,118 L1098,130 L1148,142 L1208,154 L1275,164 L1355,174 L1440,182 L1440,208 L1440,230 Z"/>
+  </svg>
   <div class="footer-bg"></div>
   <div class="footer-body">
     <div class="fb-brand">
@@ -1664,7 +1715,9 @@ h<!DOCTYPE html>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Our Services</a></li>
+        <li><a href="#features">Why Apex</a></li>
         <li><a href="#platforms">Platforms</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1672,7 +1725,7 @@ h<!DOCTYPE html>
     <div class="fb-col">
       <h5>Contact</h5>
       <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span><a href="mailto:purchasing@ApexSolutionsDistribution.com">purchasing@ApexSolutionsDistribution.com</a></span></div>
-      <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span><a href="tel:3523995565">352-571-1220</a></span></div>
+      <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span><a href="tel:3525711220">352-571-1220</a></span></div>
       <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Florida (Serving Nationwide)</span></div>
     </div>
   </div>
@@ -1715,7 +1768,7 @@ h<!DOCTYPE html>
     <p><strong style="color:#fff">Effective Date:</strong> January 1, 2026</p>
     <p>Apex Solutions Distribution LLC ("we," "our," or "us") is committed to protecting the privacy of those who visit our website and submit inquiries through our contact form.</p>
     <p><strong style="color:#fff">Information We Collect</strong></p>
-    <p>When you submit a partnership or vendor inquiry through our contact form, we collect the information you provide, including your name, company name, business email address, phone number, and any attached files (such as brand catalogs or price lists).</p>
+    <p>When you submit a partnership or brand or authorized distributor inquiry through our contact form, we collect the information you provide, including your name, company name, business email address, phone number, and any attached files (such as brand catalogs or price lists).</p>
     <p><strong style="color:#fff">How We Use Your Information</strong></p>
     <p>Information submitted through our contact form is used solely to evaluate your inquiry and respond to your request. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
     <p><strong style="color:#fff">Data Retention</strong></p>
