@@ -31,7 +31,7 @@
     --card:    #111;
     --card2:   #161618;
     --border:  #1e1e1e;
-    --muted:   #666;
+    --muted:   #999;
     --nav-h:   72px;
   }
 
@@ -101,18 +101,18 @@
   .logo-text .apex-word .t { color: var(--teal); }
   .logo-text .sub {
     font-size: 0.6rem; letter-spacing: 0.07em;
-    color: rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.72);
   }
 
   /* Desktop nav links (hidden on mobile) */
   .nav-links {
-    display: flex; align-items: center; gap: 1.5rem;
+    display: flex; align-items: center; gap: 1.1rem;
     flex: 1; justify-content: center;
   }
   .nav-links a {
-    font-size: 0.73rem; font-weight: 600;
-    letter-spacing: 0.07em; text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
+    font-size: 0.67rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: rgba(255,255,255,0.80);
     transition: color 0.2s;
     white-space: nowrap;
   }
@@ -199,7 +199,7 @@
     border-bottom: 1px solid var(--border);
     font-size: 0.88rem; font-weight: 600;
     letter-spacing: 0.06em; text-transform: uppercase;
-    color: rgba(255,255,255,0.68);
+    color: rgba(255,255,255,0.84);
     transition: color 0.2s;
   }
   .slide-menu a:hover { color: var(--teal); }
@@ -388,7 +388,7 @@
   .trust-badge {
     display: flex; align-items: center; gap: 0.5rem;
     font-size: 0.76rem; font-weight: 600;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.80);
   }
   .trust-badge svg { width: 15px; height: 15px; stroke: var(--teal); fill: none; stroke-width: 2; }
   .trust-badge .stars { color: #f97316; letter-spacing: -0.05em; font-size: 0.82rem; }
@@ -409,7 +409,7 @@
     letter-spacing: -0.02em;
   }
   .sec-p {
-    color: var(--muted); font-size: 1rem;
+    color: rgba(255,255,255,0.88); font-size: 1rem;
     line-height: 1.78; max-width: 580px;
   }
   .divider {
@@ -440,7 +440,7 @@
   }
   .about-big .teal { color: var(--teal); }
   .about-left p {
-    color: rgba(255,255,255,0.62);
+    color: rgba(255,255,255,0.90);
     font-size: 0.97rem; line-height: 1.82;
     margin-bottom: 1.1rem;
   }
@@ -607,7 +607,7 @@
   }
   .svc-short {
     font-size: 0.8rem; line-height: 1.5;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.75);
   }
   .svc-tog {
     width: 24px; height: 24px; flex-shrink: 0;
@@ -631,11 +631,11 @@
   }
   .svc-body-inner p {
     font-size: 0.85rem; line-height: 1.72;
-    color: rgba(255,255,255,0.58); padding-top: 1rem;
+    color: rgba(255,255,255,0.78); padding-top: 1rem;
   }
   .svc-bullets { list-style: none; margin-top: 0.75rem; }
   .svc-bullets li {
-    font-size: 0.8rem; color: rgba(255,255,255,0.48);
+    font-size: 0.8rem; color: rgba(255,255,255,0.88);
     padding: 0.28rem 0 0.28rem 1rem;
     position: relative;
   }
@@ -655,7 +655,7 @@
     margin-top: 3rem;
   }
   .feat-card {
-    background: var(--card2);
+    background: #1e1e22;
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 2rem 1.8rem;
@@ -695,7 +695,7 @@
   }
   .feat-card p {
     font-size: 0.86rem; line-height: 1.72;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.88);
   }
 
   /* ══════════════════════════════════════════
@@ -727,7 +727,7 @@
     display: flex; align-items: flex-start; gap: 0.85rem;
     padding: 0.85rem 0;
     border-bottom: 1px solid var(--border);
-    font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.6;
+    font-size: 0.9rem; color: rgba(255,255,255,0.90); line-height: 1.6;
   }
   .replen-list li:last-child { border-bottom: none; }
   .replen-list li .chk {
@@ -749,11 +749,11 @@
     display: inline-flex; align-items: center; gap: 0.4rem;
     font-size: 0.72rem; font-weight: 600;
     letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 0.45rem 0.9rem;
-    border-radius: 50px;
-    border: 1px solid var(--border);
-    color: rgba(255,255,255,0.6);
-    background: var(--card);
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #3a3a42;
+    color: #ddd;
+    background: #1e1e22;
     transition: border-color 0.2s, color 0.2s;
   }
   .pill:hover { border-color: var(--teal); color: var(--teal); }
@@ -815,10 +815,10 @@
   .faq-a-in {
     padding-bottom: 1.5rem;
     font-size: 0.88rem; line-height: 1.8;
-    color: rgba(255,255,255,0.52);
+    color: rgba(255,255,255,0.88);
   }
   .faq-item.open .faq-a-in {
-    color: rgba(255,255,255,0.78);
+    color: rgba(255,255,255,0.90);
   }
 
   /* ══════════════════════════════════════════
@@ -847,7 +847,7 @@
   }
   .cta-in h2 .t { color: var(--teal); }
   .cta-in p {
-    color: rgba(255,255,255,0.58); font-size: 1rem;
+    color: rgba(255,255,255,0.78); font-size: 1rem;
     max-width: 480px; margin: 0 auto 2.8rem; line-height: 1.75;
   }
   .cta-call-btn {
@@ -867,7 +867,7 @@
   .cta-note {
     margin-top: 1.1rem;
     font-size: 0.66rem; letter-spacing: 0.18em;
-    text-transform: uppercase; color: rgba(255,255,255,0.3);
+    text-transform: uppercase; color: rgba(255,255,255,0.82);
   }
 
   /* ══════════════════════════════════════════
@@ -914,7 +914,7 @@
   }
   .contact-left h2 .t { color: var(--teal); }
   .contact-left p {
-    color: var(--muted); font-size: 0.92rem;
+    color: rgba(255,255,255,0.88); font-size: 0.92rem;
     line-height: 1.78; margin-bottom: 2rem;
   }
   .c-detail {
@@ -936,22 +936,22 @@
 
   /* Form */
   .form-box {
-    background: var(--card);
-    border: 1px solid var(--border);
+    background: #1e1e22;
+    border: 1px solid #2e2e34;
     border-radius: 12px;
     padding: 2.4rem;
   }
   .form-box h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem; }
-  .form-tagline { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.8rem; line-height: 1.5; }
+  .form-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.82); margin-bottom: 1.8rem; line-height: 1.5; }
   .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .f-g { margin-bottom: 1rem; }
   .f-g label {
     display: block; font-size: 0.63rem; letter-spacing: 0.13em;
-    text-transform: uppercase; color: var(--muted); margin-bottom: 0.42rem;
+    text-transform: uppercase; color: rgba(255,255,255,0.82); margin-bottom: 0.42rem;
   }
   .f-g input, .f-g select, .f-g textarea {
-    width: 100%; background: #080808;
-    border: 1px solid var(--border); border-radius: 6px;
+    width: 100%; background: #131316;
+    border: 1px solid #2e2e34; border-radius: 6px;
     padding: 0.76rem 1rem; color: #fff;
     font-size: 0.88rem; font-family: 'Inter', sans-serif;
     outline: none; transition: border-color 0.2s, box-shadow 0.2s;
@@ -969,7 +969,7 @@
     transition: border-color 0.22s, background 0.22s;
   }
   .file-zone:hover { border-color: var(--teal); background: rgba(0,212,212,0.03); }
-  .file-zone p { font-size: 0.8rem; color: var(--muted); margin-top: 0.45rem; }
+  .file-zone p { font-size: 0.8rem; color: rgba(255,255,255,0.82); margin-top: 0.45rem; }
   .file-zone span { color: var(--teal); }
   .file-zone input { display: none; }
   #fdisplay { font-size: 0.76rem; color: var(--teal); margin-top: 0.4rem; display: none; }
@@ -1014,16 +1014,16 @@
     display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.1rem;
   }
   .fb-brand .footer-logo .logo-icon { width: 38px; height: 38px; }
-  .fb-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.36); line-height: 1.72; max-width: 300px; margin-bottom: 0.9rem; }
+  .fb-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.72); line-height: 1.72; max-width: 300px; margin-bottom: 0.9rem; }
   .fb-trademark { font-size: 0.68rem; color: #2a2a2a; line-height: 1.65; max-width: 320px; }
   .fb-col h5 { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
   .fb-col ul { list-style: none; }
   .fb-col ul li { margin-bottom: 0.65rem; }
-  .fb-col ul li a { font-size: 0.84rem; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+  .fb-col ul li a { font-size: 0.84rem; color: rgba(255,255,255,0.75); transition: color 0.2s; }
   .fb-col ul li a:hover { color: var(--teal); }
   .fc-item { display: flex; align-items: flex-start; gap: 0.55rem; margin-bottom: 0.85rem; }
   .fc-item svg { width: 13px; height: 13px; stroke: var(--teal); fill: none; stroke-width: 1.8; flex-shrink: 0; margin-top: 2px; }
-  .fc-item span { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .fc-item span { font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
   .fc-item span a:hover { color: var(--teal); }
   .footer-bottom {
     position: relative; z-index: 1;
@@ -1082,9 +1082,7 @@
 <!-- ════════════════════════════
      FLOATING PHONE BUTTON
 ════════════════════════════ -->
-<a href="tel:3525711220" class="float-call" aria-label="Call Apex Solutions Distribution">
-  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-</a>
+
 
 <!-- ════════════════════════════
      NAVBAR
@@ -1113,10 +1111,7 @@
 
   <div class="nav-right">
     <!-- Call Now pill button -->
-    <a href="tel:3525711220" class="nav-call-btn">
-      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      Call Now
-    </a>
+    <a href="#contact" class="nav-call-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Get In Touch</a>
     <!-- Hamburger -->
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -1136,11 +1131,9 @@
   <a href="#platforms"><span class="mdot"></span>Platforms We Serve</a>
   <a href="#how-it-works"><span class="mdot"></span>How It Works</a>
   <a href="#faq"><span class="mdot"></span>FAQ</a>
+  <a href="#cta"><span class="mdot"></span>Get Started</a>
   <a href="#contact"><span class="mdot"></span>Contact</a>
-  <a href="tel:3525711220" class="menu-call">
-    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    Call 352-571-1220
-  </a>
+  
 </div>
 
 <!-- ════════════════════════════
@@ -1164,10 +1157,7 @@
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Submit an Inquiry
         </a>
-        <a href="tel:3525711220" class="btn-services">
-          <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:rgba(255,255,255,0.8);flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          352-571-1220
-        </a>
+        
       </div>
 
       <!-- Trust badges -->
@@ -1234,19 +1224,19 @@
 
         <!-- Credentials trust strip -->
         <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.75rem;">
-          <div style="display:flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#bbb;">
+          <div style="display:flex;align-items:center;gap:0.4rem;background:#1e1e22;border:1px solid #3a3a42;border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#ddd;">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Registered LLC
           </div>
-          <div style="display:flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#bbb;">
+          <div style="display:flex;align-items:center;gap:0.4rem;background:#1e1e22;border:1px solid #3a3a42;border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#ddd;">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Florida Licensed
           </div>
-          <div style="display:flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#bbb;">
+          <div style="display:flex;align-items:center;gap:0.4rem;background:#1e1e22;border:1px solid #3a3a42;border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#ddd;">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             DUNS Registered
           </div>
-          <div style="display:flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#bbb;">
+          <div style="display:flex;align-items:center;gap:0.4rem;background:#1e1e22;border:1px solid #3a3a42;border-radius:6px;padding:0.4rem 0.75rem;font-size:0.75rem;color:#ddd;">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Authorized Distributor
           </div>
@@ -1455,38 +1445,38 @@
       <!-- Budget callout -->
       <div style="display:inline-block;background:rgba(0,212,212,0.07);border:1px solid rgba(0,212,212,0.22);border-radius:10px;padding:1.1rem 2.2rem;">
         <div style="font-size:2.4rem;font-weight:900;color:var(--teal);letter-spacing:-0.03em;line-height:1;">$50,000 – $150,000</div>
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;color:rgba(255,255,255,0.45);text-transform:uppercase;margin-top:0.4rem;">Active Quarterly Inventory Budget · Distributed Across Brands &amp; Categories</div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;color:rgba(255,255,255,0.75);text-transform:uppercase;margin-top:0.4rem;">Active Quarterly Inventory Budget · Distributed Across Brands &amp; Categories</div>
       </div>
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem;">
 
       <!-- Step 1 -->
-      <div class="reveal" style="text-align:center;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;">
+      <div class="reveal" style="text-align:center;padding:2.5rem 2rem;background:#1e1e22;border:1px solid #2e2e34;border-radius:12px;">
         <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dk) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 22px rgba(0,212,212,0.30);">
           <span style="font-size:1.35rem;font-weight:800;color:#000;">01</span>
         </div>
         <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.65rem;">Submit Your Catalog</h3>
-        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.60);margin-bottom:1rem;">Send your wholesale catalog, product line sheet, or brand overview — including UPC/ASIN codes and wholesale unit pricing where available.</p>
+        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.88);margin-bottom:1rem;">Send your wholesale catalog, product line sheet, or brand overview — including UPC/ASIN codes and wholesale unit pricing where available.</p>
         <a href="#contact" style="display:inline-block;font-size:0.88rem;font-weight:700;color:#000;text-decoration:none;background:var(--teal);border-radius:7px;padding:0.65rem 1.5rem;letter-spacing:0.02em;box-shadow:0 0 18px rgba(0,212,212,0.35);transition:background 0.2s,box-shadow 0.2s;" onmouseover="this.style.background='#00b8b8';this.style.boxShadow='0 0 26px rgba(0,212,212,0.55)'" onmouseout="this.style.background='var(--teal)';this.style.boxShadow='0 0 18px rgba(0,212,212,0.35)'">Submit a Partnership Inquiry →</a>
       </div>
 
       <!-- Step 2 -->
-      <div class="reveal d2" style="text-align:center;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;">
+      <div class="reveal d2" style="text-align:center;padding:2.5rem 2rem;background:#1e1e22;border:1px solid #2e2e34;border-radius:12px;">
         <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--orange) 0%,#c04a00 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 22px rgba(255,107,0,0.28);">
           <span style="font-size:1.35rem;font-weight:800;color:#fff;">02</span>
         </div>
         <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.65rem;">We Review &amp; Evaluate</h3>
-        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.60);">Our procurement team reviews your submission against our current quarterly allocation cycle — evaluating catalog fit, pricing structure, and marketplace potential. We respond within 7 to 10 business days.</p>
+        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.88);">Our procurement team reviews your submission against our current quarterly allocation cycle — evaluating catalog fit, pricing structure, and marketplace potential. We respond within 7 to 10 business days.</p>
       </div>
 
       <!-- Step 3 -->
-      <div class="reveal d3" style="text-align:center;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;">
+      <div class="reveal d3" style="text-align:center;padding:2.5rem 2rem;background:#1e1e22;border:1px solid #2e2e34;border-radius:12px;">
         <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a8a8a 0%,var(--teal) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 22px rgba(0,212,212,0.22);">
           <span style="font-size:1.35rem;font-weight:800;color:#000;">03</span>
         </div>
         <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.65rem;">We Reach Out &amp; Move Forward</h3>
-        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.60);">If your line is a fit for our current cycle, we contact you directly to discuss purchase volume, wholesale terms, and next steps. Approved sources move into our active inventory rotation within the same quarter — with the goal of becoming your trusted B2B distribution partner.</p>
+        <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.88);">If your line is a fit for our current cycle, we contact you directly to discuss purchase volume, wholesale terms, and next steps. Approved sources move into our active inventory rotation within the same quarter — with the goal of becoming your trusted B2B distribution partner.</p>
       </div>
 
     </div>
@@ -1523,7 +1513,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">How do I submit a brand or distribution inquiry?<span class="faq-ico">+</span></button>
-          <div class="faq-a"><div class="faq-a-in">Use the contact form below to submit your inquiry, or email our purchasing department directly at purchasing@ApexSolutionsDistribution.com. We encourage you to include your brand catalog or product line sheet — the form accepts file attachments. Our procurement team will evaluate your submission and respond within 7 to 10 business days.</div></div>
+          <div class="faq-a"><div class="faq-a-in">Use the contact form below to submit your inquiry — our team typically responds within 1–2 business days. We encourage you to include your brand catalog or product line sheet — the form accepts file attachments. Our procurement team will evaluate your submission and respond within 7 to 10 business days.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Do you require exclusivity agreements?<span class="faq-ico">+</span></button>
@@ -1563,7 +1553,7 @@
       <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       Submit a Partnership Inquiry
     </a>
-    <div class="cta-note">Prefer to talk? Call us directly: &nbsp;<a href="tel:3525711220" style="color:rgba(255,255,255,0.5);text-decoration:underline;">352-571-1220</a></div>
+    
   </div>
 </section>
 
@@ -1586,58 +1576,20 @@
       <div class="divider"></div>
     </div>
 
-    <div class="contact-strip reveal">
-      <div class="cs-item">
-        <div class="cs-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div class="cs-lbl">Address</div>
-        <div class="cs-val">Florida (Serving Nationwide)</div>
-      </div>
-      <div class="cs-item">
-        <div class="cs-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-        <div class="cs-lbl">Phone</div>
-        <div class="cs-val">352-571-1220</div>
-      </div>
-      <div class="cs-item">
-        <div class="cs-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div class="cs-lbl">Email</div>
-        <div class="cs-val">purchasing@ApexSolutionsDistribution.com</div>
-      </div>
-      <div class="cs-item">
-        <div class="cs-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
-        <div class="cs-lbl">Classification</div>
-        <div class="cs-val">Authorized B2B Distributor</div>
-      </div>
-    </div>
 
     <div class="contact-wrap">
       <div class="reveal reveal-left">
         <h2 class="contact-left" style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;text-transform:uppercase;line-height:1.1;margin-bottom:0.5rem;">Ready to Take Your<br>Brand to the <span class="t" style="color:var(--teal)">APEX</span></h2>
         <div class="divider"></div>
         <p style="color:var(--muted);font-size:.92rem;line-height:1.78;margin-bottom:2rem;">Our procurement team actively reviews all brand or authorized distributor and brand submissions. Please include your catalog and distribution details. We'll evaluate your inquiry and respond within 7 to 10 business days.</p>
-        <div class="c-detail">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <div><div class="c-lbl">Company</div><div class="c-val">Apex Solutions Distribution LLC</div></div>
-        </div>
-        <div class="c-detail">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="c-lbl">Location</div><div class="c-val">Florida (Serving Nationwide)</div></div>
-        </div>
-        <div class="c-detail">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="c-lbl">Partnership Email</div><div class="c-val"><a href="mailto:purchasing@ApexSolutionsDistribution.com">purchasing@ApexSolutionsDistribution.com</a></div></div>
-        </div>
-        <div class="c-detail">
-          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div><div class="c-lbl">Phone</div><div class="c-val"><a href="tel:3525711220">352-571-1220</a></div></div>
-        </div>
       </div>
 
       <!-- Form -->
       <div class="form-box reveal reveal-right">
         <h3>Submit a Partnership Inquiry</h3>
         <p class="form-tagline">Fill out the form and attach your catalog or price list. Our procurement team reviews every submission within 7–10 business days.</p>
-        <p style="font-size:0.8rem;color:var(--muted);margin-top:-0.5rem;margin-bottom:1.25rem;line-height:1.65;">
-          <strong style="color:#aaa;">Tip for brands submitting for review:</strong> Please include a standard wholesale pricing list in Excel (.xlsx) or CSV format containing UPC/ASIN codes and your wholesale unit cost. This allows us to evaluate your catalog efficiently.
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.82);margin-top:-0.5rem;margin-bottom:1.25rem;line-height:1.65;">
+          <strong style="color:#ddd;">Tip for brands submitting for review:</strong> Please include a standard wholesale pricing list in Excel (.xlsx) or CSV format containing UPC/ASIN codes and your wholesale unit cost. This allows us to evaluate your catalog efficiently.
         </p>
         <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" id="partnerForm">
           <input type="hidden" name="access_key" value="6b5eb03e-f43e-42b9-bd7e-6ce8b33080b1"/>
@@ -1722,12 +1674,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <div class="fb-col">
-      <h5>Contact</h5>
-      <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span><a href="mailto:purchasing@ApexSolutionsDistribution.com">purchasing@ApexSolutionsDistribution.com</a></span></div>
-      <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.93 2 2 0 012.1 1h3a2 2 0 012 1.72c.127.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span><a href="tel:3525711220">352-571-1220</a></span></div>
-      <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Florida (Serving Nationwide)</span></div>
-    </div>
   </div>
   <div class="footer-bottom">
     <div class="copy">© 2026 Apex Solutions Distribution LLC. All Rights Reserved.</div>
@@ -1774,7 +1720,7 @@
     <p><strong style="color:#fff">Data Retention</strong></p>
     <p>We retain inquiry submissions only as long as necessary to evaluate and respond to your request.</p>
     <p><strong style="color:#fff">Contact</strong></p>
-    <p>For privacy-related questions, contact us at <a href="mailto:purchasing@apexsolutionsdistribution.com" style="color:#00d4d4">purchasing@apexsolutionsdistribution.com</a>.</p>
+    <p>For privacy-related questions, contact us using the <a href="#contact" style="color:#00d4d4">contact form on our website</a>.</p>
   </div>
 </div>
 
@@ -1789,7 +1735,7 @@
     <p><strong style="color:#fff">Known Limitations</strong></p>
     <p>We are an actively developing business and our website continues to evolve. If you encounter any accessibility barriers, please let us know so we can address them promptly.</p>
     <p><strong style="color:#fff">Feedback</strong></p>
-    <p>If you experience difficulty accessing any part of our website, please contact us at <a href="mailto:purchasing@apexsolutionsdistribution.com" style="color:#00d4d4">purchasing@apexsolutionsdistribution.com</a> and we will do our best to assist you.</p>
+    <p>If you experience difficulty accessing any part of our website, please contact us using the <a href="#contact" style="color:#00d4d4">contact form on our website</a> and we will do our best to assist you.</p>
   </div>
 </div>
 
