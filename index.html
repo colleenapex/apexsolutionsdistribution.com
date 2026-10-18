@@ -396,7 +396,7 @@
   /* ══════════════════════════════════════════
      SHARED SECTION STYLES
   ══════════════════════════════════════════ */
-  section { padding: 96px 0; }
+  section { padding: 52px 0 96px; }
   .container { max-width: 1180px; margin: 0 auto; padding: 0 2.2rem; }
   .tag {
     font-size: 0.62rem; letter-spacing: 0.22em;
@@ -573,8 +573,8 @@
   .svc:nth-child(even) { border-right: none; }
   .svc:nth-last-child(-n+2) { border-bottom: none; }
   .svc.active {
-    background: rgba(0,212,212,0.05);
-    border-color: rgba(0,212,212,0.22);
+    background: #1e1e22;
+    border-color: #3a3a42;
   }
   .svc.active::before {
     content: '';
@@ -1100,6 +1100,7 @@
 
   <!-- Desktop nav links -->
   <div class="nav-links">
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#features">Why Apex</a>
@@ -1139,11 +1140,15 @@
 <!-- ════════════════════════════
      HERO
 ════════════════════════════ -->
-<section id="home" style="padding-top:0; padding-bottom:0; min-height:100vh; display:flex; flex-direction:column;">
+<section id="home" style="padding-top:0; padding-bottom:0; min-height:100vh; display:flex; flex-direction:column; scroll-margin-top:0;">
   <div class="hero-bg"></div>
   <canvas class="hero-canvas" id="heroCanvas"></canvas>
 
-  <div style="position:relative;z-index:2; flex:1; display:flex; align-items:center; padding: calc(var(--nav-h) + 2.5rem) 2.2rem 6rem;">
+  <!-- top spacer pushes content down from nav, shares remaining height equally with bottom spacer -->
+  <div style="flex:1; min-height:calc(var(--nav-h) + 2rem);"></div>
+
+  <!-- hero content: natural height, not stretched -->
+  <div style="position:relative;z-index:2; padding: 0 2.2rem;">
     <div class="hero-content reveal">
       <h1 class="hero-h1">
         Your Trusted<br>
@@ -1157,7 +1162,6 @@
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Submit an Inquiry
         </a>
-        
       </div>
 
       <!-- Trust badges -->
@@ -1177,29 +1181,32 @@
       </div>
     </div>
   </div>
-</section>
 
-<!-- Ticker -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <div class="ticker-item">Authorized Wholesale Distributor<div class="tsep"></div></div>
-    <div class="ticker-item">Amazon Reseller Partner<div class="tsep"></div></div>
-    <div class="ticker-item">Price Integrity Management<div class="tsep"></div></div>
-    <div class="ticker-item">Replenishable Consumer Goods<div class="tsep"></div></div>
-    <div class="ticker-item">Multi-Channel Marketplace Optimization<div class="tsep"></div></div>
-    <div class="ticker-item">Brand Protection Protocol™<div class="tsep"></div></div>
-    <div class="ticker-item">B2B Wholesale Distribution<div class="tsep"></div></div>
-    <div class="ticker-item">Catalog &amp; Listing Compliance<div class="tsep"></div></div>
-    <div class="ticker-item">Authorized Wholesale Distributor<div class="tsep"></div></div>
-    <div class="ticker-item">Amazon Reseller Partner<div class="tsep"></div></div>
-    <div class="ticker-item">Price Integrity Management<div class="tsep"></div></div>
-    <div class="ticker-item">Replenishable Consumer Goods<div class="tsep"></div></div>
-    <div class="ticker-item">Multi-Channel Marketplace Optimization<div class="tsep"></div></div>
-    <div class="ticker-item">Brand Protection Protocol™<div class="tsep"></div></div>
-    <div class="ticker-item">B2B Wholesale Distribution<div class="tsep"></div></div>
-    <div class="ticker-item">Catalog &amp; Listing Compliance<div class="tsep"></div></div>
+  <!-- Ticker sits right below trust badges as part of the centered content group -->
+  <div class="ticker-wrap" style="position:relative;z-index:2;margin-top:1.8rem;">
+    <div class="ticker-track">
+      <div class="ticker-item">Authorized Wholesale Distributor<div class="tsep"></div></div>
+      <div class="ticker-item">Amazon Reseller Partner<div class="tsep"></div></div>
+      <div class="ticker-item">Price Integrity Management<div class="tsep"></div></div>
+      <div class="ticker-item">Replenishable Consumer Goods<div class="tsep"></div></div>
+      <div class="ticker-item">Multi-Channel Marketplace Optimization<div class="tsep"></div></div>
+      <div class="ticker-item">Brand Protection Protocol™<div class="tsep"></div></div>
+      <div class="ticker-item">B2B Wholesale Distribution<div class="tsep"></div></div>
+      <div class="ticker-item">Catalog &amp; Listing Compliance<div class="tsep"></div></div>
+      <div class="ticker-item">Authorized Wholesale Distributor<div class="tsep"></div></div>
+      <div class="ticker-item">Amazon Reseller Partner<div class="tsep"></div></div>
+      <div class="ticker-item">Price Integrity Management<div class="tsep"></div></div>
+      <div class="ticker-item">Replenishable Consumer Goods<div class="tsep"></div></div>
+      <div class="ticker-item">Multi-Channel Marketplace Optimization<div class="tsep"></div></div>
+      <div class="ticker-item">Brand Protection Protocol™<div class="tsep"></div></div>
+      <div class="ticker-item">B2B Wholesale Distribution<div class="tsep"></div></div>
+      <div class="ticker-item">Catalog &amp; Listing Compliance<div class="tsep"></div></div>
+    </div>
   </div>
-</div>
+
+  <!-- bottom spacer fills remaining space so hero stays full-screen -->
+  <div style="flex:1;"></div>
+</section>
 
 <!-- ════════════════════════════
      ABOUT / DISTRIBUTION PARTNER
@@ -1251,9 +1258,9 @@
                style="width:100%;border-radius:14px;object-fit:cover;height:500px;object-position:65% top;filter:brightness(0.95) saturate(1.05);" loading="lazy"/>
         </div>
         <!-- Label under image -->
-        <div style="margin-top:1rem;text-align:center;padding:0.85rem 1.5rem;background:rgba(0,212,212,0.06);border:1px solid rgba(0,212,212,0.18);border-radius:10px;width:100%;">
+        <div style="margin-top:1rem;text-align:center;padding:0.85rem 1.5rem;background:#1e1e22;border:1px solid #3a3a42;border-radius:10px;width:100%;">
           <div style="font-size:0.7rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--teal);font-weight:700;">Authorized B2B Distributor</div>
-          <div style="font-size:0.78rem;color:var(--muted);margin-top:0.25rem;">Apex Solutions Distribution LLC</div>
+          <div style="font-size:0.78rem;color:#ddd;margin-top:0.25rem;">Apex Solutions Distribution LLC</div>
         </div>
       </div>
     </div>
@@ -1581,15 +1588,15 @@
       <div class="reveal reveal-left">
         <h2 class="contact-left" style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;text-transform:uppercase;line-height:1.1;margin-bottom:0.5rem;">Ready to Take Your<br>Brand to the <span class="t" style="color:var(--teal)">APEX</span></h2>
         <div class="divider"></div>
-        <p style="color:var(--muted);font-size:.92rem;line-height:1.78;margin-bottom:2rem;">Our procurement team actively reviews all brand or authorized distributor and brand submissions. Please include your catalog and distribution details. We'll evaluate your inquiry and respond within 7 to 10 business days.</p>
+        <p style="color:rgba(255,255,255,0.88);font-size:.98rem;line-height:1.78;margin-bottom:2rem;font-weight:500;">Our procurement team actively reviews all brand or authorized distributor and brand submissions. Please include your catalog and distribution details. We'll evaluate your inquiry and respond within 7 to 10 business days.</p>
       </div>
 
       <!-- Form -->
       <div class="form-box reveal reveal-right">
         <h3>Submit a Partnership Inquiry</h3>
-        <p class="form-tagline">Fill out the form and attach your catalog or price list. Our procurement team reviews every submission within 7–10 business days.</p>
+        <p class="form-tagline">Fill out the form and <strong style="color:var(--orange);"><u>attach your catalog and price list</u></strong>. Our procurement team reviews every submission within 7–10 business days.</p>
         <p style="font-size:0.8rem;color:rgba(255,255,255,0.82);margin-top:-0.5rem;margin-bottom:1.25rem;line-height:1.65;">
-          <strong style="color:#ddd;">Tip for brands submitting for review:</strong> Please include a standard wholesale pricing list in Excel (.xlsx) or CSV format containing UPC/ASIN codes and your wholesale unit cost. This allows us to evaluate your catalog efficiently.
+          <strong style="color:#ddd;">Tip for brands submitting for review:</strong> Please include a standard wholesale pricing list in <strong style="color:var(--orange);"><u>Excel (.xlsx) or CSV format</u></strong> containing UPC/ASIN codes and your wholesale unit cost. This allows us to evaluate your catalog efficiently.
         </p>
         <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" id="partnerForm">
           <input type="hidden" name="access_key" value="6b5eb03e-f43e-42b9-bd7e-6ce8b33080b1"/>
@@ -1671,6 +1678,7 @@
         <li><a href="#platforms">Platforms</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="#cta">Get Started</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
