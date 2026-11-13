@@ -1813,6 +1813,16 @@ document.getElementById('cfile').addEventListener('change', function() {
 
 /* ── Form feedback ── */
 document.getElementById('partnerForm').addEventListener('submit', function() {
+  /* Phone: convert US numbers to +1 format; clear if it cannot be read */
+  const ph = document.getElementById('ph');
+  if (ph && ph.value.trim()) {
+    const raw = ph.value.trim();
+    const d = raw.replace(/\D/g, '');
+    if (raw.charAt(0) === '+' && d.length >= 8 && d.length <= 15) ph.value = '+' + d;
+    else if (d.length === 10) ph.value = '+1' + d;
+    else if (d.length === 11 && d.charAt(0) === '1') ph.value = '+' + d;
+    else ph.value = '';
+  }
   const b = document.getElementById('submitBtn');
   b.textContent = 'Sending…'; b.disabled = true;
 });
