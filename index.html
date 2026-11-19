@@ -981,7 +981,7 @@
     transition: background 0.2s, transform 0.15s;
   }
   .f-submit:hover { background: var(--teal-dk); transform: translateY(-1px); }
-  .f-legal { font-size: 0.68rem; color: #333; text-align: center; margin-top: 0.75rem; line-height: 1.55; }
+  .f-legal { font-size: 0.8rem; color: rgba(255,255,255,0.72); text-align: center; margin-top: 0.75rem; line-height: 1.55; }
 
   /* ══════════════════════════════════════════
      FOOTER
@@ -1031,10 +1031,11 @@
     display: flex; justify-content: space-between; align-items: center;
     gap: 1rem; flex-wrap: wrap;
   }
-  .copy { font-size: 0.74rem; color: #333; }
+  .copy { font-size: 0.78rem; color: rgba(255,255,255,0.33); }
+  .fpriv { max-width:1180px; margin:0 auto; padding:0 2.2rem 0.4rem; position:relative; z-index:1; font-size:0.78rem; color:rgba(255,255,255,0.72); }
   .flinks { display: flex; gap: 2rem; }
-  .flinks a { font-size: 0.74rem; color: #333; transition: color 0.2s; }
-  .flinks a:hover { color: var(--muted); }
+  .flinks a { font-size: 0.78rem; color: rgba(255,255,255,0.35); transition: color 0.2s; }
+  .flinks a:hover { color: var(--teal); }
 
   /* ══════════════════════════════════════════
      RESPONSIVE
@@ -1665,7 +1666,7 @@
           </div>
           
           <button type="submit" class="f-submit" id="submitBtn">Submit Inquiry →</button>
-          <p class="f-legal">Your information is reviewed exclusively by our purchasing team and is never sold or shared for marketing purposes.</p>
+          <p class="f-legal">Your information is reviewed exclusively by our purchasing team<br>and is never sold or shared for marketing purposes.</p>
         </form>
       </div>
     </div>
